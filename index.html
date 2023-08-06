@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Nav Tempate</title>
+   <title>Left nav - Tailwind CSS</title>
    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -12,11 +12,32 @@
 </head>
 
 <body>
-
+   <div class="top-menu w-full bg-red-500 relative flex items-center justify-between py-1">
+      <div class="top-menu-left ml-2 inline-flex">
+         <i class="fa fa-bars md:pointer-events-none p-2 font-medium text-white " id="menu-toggle"></i>
+         <a href="#"><i class="fa-solid fa-house text-white p-2"></i></a>
+         <div class="relative inline-flex ml-2">
+            <input type="text" class=" pl-10 pr-4 w-50 focus:outline-none focus:ring focus:border-blue-300 bg-red-400 text-white font-normal">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+               <i class="fa fa-magnifying-glass text-white"></i>
+            </div>
+          </div>
+                                                                                                
+      </div>
+      <div class="top-menu-right mr-6">
+         <div class="top-menu-right inline-flex">
+            <a href="#"><i class="fa-regular fa-plus text-white mx-3"></i></a>
+            <a href="#" class="text-white font-sm"><i class="fa-solid fa-chart-line text-white mr-1"></i>0/5</a>
+            <a href="#"><i class="fa-regular fa-circle-question text-white mx-2"></i></a>
+            <a href="#"><i class="fa-regular fa-bell text-white mx-2"></i></a>
+            <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-white rounded-full dark:bg-blue-900 dark:text-blue-300 bg-red-900">U</span>
+            
+          </div>
+      </div>
+   </div>
    <aside id="separator-sidebar "
-      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      class="fixed top-10 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
       aria-label="Sidebar">
-      <i class="fa fa-bars md:pointer-events-none md:opacity-0 hover:bg-gray-100 p-4 font-medium " id="menu-toggle"></i>
 
       <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 border-r sidebar w-full sm:w-56 py-4 hidden md:block" id="sidebar">
          <ul class=" font-medium">
